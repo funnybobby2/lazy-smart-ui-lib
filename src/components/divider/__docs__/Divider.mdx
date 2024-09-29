@@ -1,0 +1,30 @@
+# Divider
+
+Divider component with different props.
+
+## Usage
+
+```ts
+import { Divider } from 'lazy-smart-ui-lib';
+
+const Example = () => {
+  return (
+    <>
+      <Divider
+        label="Test"
+        labelPlacement="left"
+        size="thick"
+      />
+    </>
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **custom** - A string that represents an external class to overwrite the style.
+- **label** - A string that represents the label.
+- **labelPlacement** - A string that represents the position of the label. Can be 'left', 'center' or 'right'.
+- **size** -  A string that represents the size of the seprator. Can be 'thin', 'medium' or 'thick'.

@@ -22,7 +22,7 @@ export const StyledButton = styled.div`
     cursor: pointer;
     user-select: none;
 
-    transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in-out, border-color 250ms ease-in-out, color 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out, border-color 250ms ease-in-out, color 250ms ease-in-out;
 
     &.small{
       font-size: 0.8125rem;
@@ -54,16 +54,13 @@ export const StyledButton = styled.div`
       color: #FFFFFF;
       background-color: #1976d2;
       border: none;
-      box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
 
       &:hover{
         background-color: #1565c0;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
       }
 
       &.disabled {
         color: rgba(0, 0, 0, 0.26);
-        box-shadow: none;
         background-color: rgba(0, 0, 0, 0.12);
         pointer-events: none;
         cursor: default;

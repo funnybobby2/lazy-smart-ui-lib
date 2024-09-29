@@ -11,7 +11,6 @@ export default {
     disabled: {
       control: {type: 'boolean'}
     },
-    id: { control: 'text' },
     size: {
       options: ['small', 'medium', 'large'],
       control: { type: 'radio' },

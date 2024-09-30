@@ -2,7 +2,7 @@ import { StyledDivider } from './divider.style';
 import { DividerProps } from "./divider.types";
 import {FC} from "react";
 
-const Switch: FC<DividerProps> = ({custom, label, labelPlacement="center", size="medium"}) => {
+const Divider: FC<DividerProps> = ({custom, label, labelPlacement="center", size="medium"}) => {
 
   const customClass = custom ?? "";
   return (
@@ -17,4 +17,4 @@ const Switch: FC<DividerProps> = ({custom, label, labelPlacement="center", size=
   );
 };
 
-export default Switch;
+export default Divider;

@@ -1,0 +1,33 @@
+# Badge
+
+Badge component with different props.
+
+## Usage
+
+```ts
+import { Badge } from 'lazy-smart-ui-lib';
+
+const Example = () => {
+  return (
+      <Badge
+        value={115}
+        max={99}
+        position="top"
+      >
+      <span>Yo</span>
+      </Badge>
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **custom** - A string that represents an external class to overwrite the style.
+- **value** - A number represents the value in the badge
+- **max** - A number represents the limit value in the badge
+- **type** - A string with one of five possible values: "info", "success", "warning', "error" or "other". It defines the type of the badge.
+- **position** - A string with one of two possible values: "top" or "bottom". It defines the postion of the badge.
+- **children** - A ReactNode, represent the element to which the badge applies.
+

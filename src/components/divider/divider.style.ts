@@ -35,5 +35,6 @@ export const StyledDivider = styled.div<DividerProps>`
     font-size: ${(props) => props.size === 'thin' ? '14px' :
       props.size === 'medium' ? '18px' : '22px'};
     font-weight: bold;
+    font-family: 'Roboto';
   }
 `;

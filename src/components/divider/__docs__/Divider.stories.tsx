@@ -27,5 +27,5 @@ DividerEmpty.args = {};
 
 export const DividerText = Template.bind({});
 DividerText.args = {
-  label: "'Separate'"
+  label: "Separate"
 };

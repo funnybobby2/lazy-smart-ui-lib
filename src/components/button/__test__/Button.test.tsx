@@ -5,7 +5,7 @@ import Button from "../Button";
 
 describe("Button component", () => {
   it("Button should render correctly", () => {
-    render(<Button label="Click me" onClick={() => console.log('yo')}/>);
+    render(<Button onClick={() => console.log('yo')}>Click me</Button>);
     const button = screen.getByText("Click me");
     expect(button).toBeInTheDocument();
   });

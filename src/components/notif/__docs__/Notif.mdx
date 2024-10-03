@@ -1,0 +1,36 @@
+# Notif
+
+Notif component with different props.
+
+## Usage
+
+```ts
+import { Notif } from 'lazy-smart-ui-lib';
+
+const Example = () => {
+  return (
+      <Notif
+        open={true}
+        onClose={() => {}}
+        position="top-center"
+        type="warning"
+      >
+        <span>Yo !</span>
+      </Notif>
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **custom** - A string that represents an external class to overwrite the style.
+- **open** - A boolean represents the opening state of the notif
+- **duration** - A number represents in milliseconds the lifetime of the notif.
+- **onClose** - A function to be called when user click on the close icon.
+- **children** - A ReactNode, represent the element to which the badge applies.
+- **position** - A string with one of six possible values: "top-left", "top-center", "top-right", "bottom-left", "bottom-center" or "bottom-right". It defines the postion of the notif.
+- **type** - A string with one of five possible values: "info", "success", "warning', "error" or "other". It defines the type of the notif.
+
+

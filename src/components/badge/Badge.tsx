@@ -20,6 +20,7 @@ const Badge: FC<BadgeProps> = ({custom, value, type="info", max, position="top",
         className={`lazy-smart-ui-badge-wrapper ${customClass}`}
         position={position}
         type={type}
+        value={value}
       >
         {children}
         <span className="lazy-smart-ui-badge">

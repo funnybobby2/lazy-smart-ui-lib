@@ -1,0 +1,30 @@
+# Tooltip
+
+Tooltip component with different props.
+
+## Usage
+
+```ts
+import { Tooltip } from 'lazy-smart-ui-lib';
+
+const Example = () => {
+  return (
+      <Tooltip
+        content={"yo}
+        position="right"
+      >
+        <span>Yo mec</span>
+      </Tooltip>
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **custom** - A string that represents an external class to overwrite the style.
+- **position** - A string with one of two possible values: "top", "right", "bottom" or "left". It defines the postion of the tooltip.
+- **children** - A ReactNode, represent the element to which the tooltip applies.
+- **theme** - A string represents the theme of the website includes this tooltip.
+- **content** - A ReactNode, represent the content of the tooltip.

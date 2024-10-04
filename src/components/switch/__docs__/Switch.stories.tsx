@@ -33,3 +33,9 @@ SwitchLabel.args = {
   label: "switch",
   onClick: () => {},
 };
+
+export const SwitchSimple = Template.bind({});
+SwitchSimple.args = {
+  isSimple: true,
+  onClick: () => {},
+};

@@ -67,10 +67,12 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
       &.disabled {
         pointer-events: none;
         cursor: default;
-        border: 2px solid rgba(0, 0, 0, 0.26);
+        border: 2px solid;
+        border-color: ${(props) => props.isSimple ? "transparent" : "rgba(0, 0, 0, 0.26)"};
+        background-color: ${(props) => props.isSimple ? "#e2e2e3" : "transparent"};
 
         .toggle-button {
-          background-color: rgba(0, 0, 0, 0.26);
+          background-color: ${(props) => props.isSimple ? "#FFFFFF" : "rgba(0, 0, 0, 0.26)"};
         }
 
         .toggle-text-on{
@@ -79,22 +81,6 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
 
         .toggle-text-off {
           color: rgba(0, 0, 0, 0.26);
-        }
-
-        &.toggle-on{
-          border: 2px solid #1976d25c;
-
-          .toggle-button {
-            background-color: #1976d25c;
-          }
-
-          .toggle-text-on{
-            color: #FFFFFF;
-          }
-
-          .toggle-text-off {
-            color: transparent;
-          }
         }
       }
     }
@@ -121,6 +107,10 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
 
         .toggle-text-off{
           color: rgba(0,0,0,0);
+        }
+
+        &.disabled {
+          background-color: ${(props) => props.isSimple ? "#84acd3" : "transparent"};
         }
       }
 

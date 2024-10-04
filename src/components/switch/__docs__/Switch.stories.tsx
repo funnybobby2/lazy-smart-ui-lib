@@ -15,6 +15,9 @@ export default {
       options: ['left', 'right'],
       control: { type: 'radio' },
     },
+    isSimple: {
+      control: {type: 'boolean'}
+    }
   },
 } as Meta<typeof Switch>;
 

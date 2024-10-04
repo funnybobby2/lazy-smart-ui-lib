@@ -6,4 +6,5 @@ export interface SwitchProps {
   label?: ReactNode;
   labelPlacement?: "left" | "right";
   onClick: () => void;
+  isSimple?: boolean;
 }

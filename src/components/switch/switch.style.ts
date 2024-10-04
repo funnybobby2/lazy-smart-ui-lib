@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSwitch = styled.div`
+export const StyledSwitch = styled.div<{isSimple: boolean}>`
   &.lazy-smart-ui-switch {
     display: flex;
     flex-direction: row;
@@ -10,12 +10,15 @@ export const StyledSwitch = styled.div`
       width: 36px;
       height: 20px;
       position: relative;
-      border: 2px solid #444249;
+      border: 2px solid;
+      border-color: ${(props) => props.isSimple ? "transparent" : "#444249"};
       border-radius: 20px;
-      transition: border-color .3s  ease-out;
+      background-color: ${(props) => props.isSimple ? "#bfbfbf" : "transparent"};
+      transition: border-color .3s  ease-out, background-color .3s ease-out;
       box-sizing: border-box;
 
       .toggle-text-off{
+        display: ${(props) => props.isSimple ? "none" : "block"};
         position: absolute;
         top: 0;
         bottom: 0;
@@ -32,17 +35,19 @@ export const StyledSwitch = styled.div`
 
       .toggle-button{
         position: absolute;
-        top: 4px;
-        width: 8px;
+        top: ${(props) => props.isSimple ? "1px" : "4px"};
         bottom: 4px;
-        right: 21px;
-        background-color: #444249;
+        right: ${(props) => props.isSimple ? "17px" : "21px"};
+        width: ${(props) => props.isSimple ? "14px" : "8px"};
+        height: ${(props) => props.isSimple ? "14px" : ""};
+        background-color: ${(props) => props.isSimple ? "#FFFFFF" : "#444249"};
         border-radius: 19px;
         cursor: pointer;
         transition: all .3s  ease-out;
       }
 
       .toggle-text-on{
+        display: ${(props) => props.isSimple ? "none" : "block"};
         position: absolute;
         top: 0;
         bottom: 0;
@@ -97,15 +102,17 @@ export const StyledSwitch = styled.div`
     &.toggle-on {
 
       .switch{
-        border-color: #1976d2;
+        border-color: ${(props) => props.isSimple ? "transparent" : "#1976d2"};
+        background-color: ${(props) => props.isSimple ? "#1976d2" : "transparent"};
 
         .toggle-button{
-          top: 3px;
-          width: 26px;
-          bottom: 3px;
-          right: 3px;
+          top: ${(props) => props.isSimple ? "1px" : "3px"};
+          bottom: ${(props) => props.isSimple ? "4px" : "3px"};
+          right: ${(props) => props.isSimple ? "1px" : "3px"};
+          width: ${(props) => props.isSimple ? "14px" : "26px"};
+          height: ${(props) => props.isSimple ? "14px" : ""};
+          background-color: ${(props) => props.isSimple ? "#FFFFFF" : "#1976d2"};
           border-radius: 20px;
-          background-color: #1976d2;
         }
 
         .toggle-text-on{

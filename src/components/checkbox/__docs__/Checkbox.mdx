@@ -1,0 +1,34 @@
+# Checkbox
+
+Checkbox component with different props.
+
+## Usage
+
+```ts
+import { Checkbox } from 'lazy-smart-ui-lib';
+
+const Example = () => {
+  return (
+      <Checkbox
+        size="small"
+        onClick={()=> console.log("Clicked")}
+        disabled
+        label="checkbox"
+        labelPosition="left"
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **custom** - A string that represents an external class to overwrite the style.
+- **initialChecked** - Boolean, the start value of the checkbox.
+- **disabled** - A boolean indicating whether the checkbox should be disabled or not. When disabled, the checkbox cannot be clicked or interacted with.
+- **onClick** _`() => void`_ - A function that is called when the checkbox is clicked. It receives a MouseEventHandler for handling the click event on the checkbox element.
+- **size** - A string with one of three possible values: "small", "medium", or "large". It defines the size or dimensions of the checkbox.
+- **label** - A string displayed before or after the checkbox.
+- **labelPosition** - A string to know where the label is positionned. "left" or "right"
+

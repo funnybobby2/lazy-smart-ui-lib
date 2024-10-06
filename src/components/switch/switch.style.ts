@@ -6,6 +6,19 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
     flex-direction: row;
     align-items: center;
 
+    &:hover .switch:not(.disabled) {
+      background-color: ${(props) => props.isSimple ? "#1976d2" : "transparent"};
+      border-color: ${(props) => props.isSimple ? "transparent" : "#1976d2"};
+
+      .toggle-text-off{
+        color: #1976d2;
+      }
+
+      .toggle-button{
+        background-color: ${(props) => props.isSimple ? "#FFFFFF" : "#1976d2"};
+      }
+    }
+
     .switch{
       width: 36px;
       height: 20px;
@@ -13,9 +26,10 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
       border: 2px solid;
       border-color: ${(props) => props.isSimple ? "transparent" : "#444249"};
       border-radius: 20px;
-      background-color: ${(props) => props.isSimple ? "#bfbfbf" : "transparent"};
+      background-color: ${(props) => props.isSimple ? "#444249" : "transparent"};
       transition: border-color .3s  ease-out, background-color .3s ease-out;
       box-sizing: border-box;
+      cursor: pointer;
 
       .toggle-text-off{
         display: ${(props) => props.isSimple ? "none" : "block"};
@@ -29,7 +43,6 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
         font-size: 8px;
         font-weight: bold;
         user-select: none;
-        cursor: pointer;
         color: #444249;
       }
 
@@ -42,7 +55,6 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
         height: ${(props) => props.isSimple ? "14px" : ""};
         background-color: ${(props) => props.isSimple ? "#FFFFFF" : "#444249"};
         border-radius: 19px;
-        cursor: pointer;
         transition: all .3s  ease-out;
       }
 
@@ -58,7 +70,6 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
         font-family: 'Quicksand', sans-serif;
         font-size: 8px;
         font-weight: normal;
-        cursor: pointer;
         user-select: none;
         color: rgba(0,0,0,0);
         transition: color .3s  ease-out;
@@ -121,10 +132,11 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
 
     .label {
       font-family: 'Roboto', sans-serif;
-      font-size: 12px;
+      font-size: 0.875rem;
       font-weight: bold;
       color: #444249;
       transition: color .3s  ease-out;
+      user-select: none;
 
       &.label-left {
         margin-right: 8px;

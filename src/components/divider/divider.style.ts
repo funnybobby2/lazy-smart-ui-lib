@@ -21,11 +21,11 @@ export const StyledDivider = styled.div<DividerProps>`
   }
 
   &::before {
-    width: ${(props) => props.labelPlacement === 'left' ? "10%" : "100%"};
+    width: ${(props) => props.labelPosition === 'left' ? "10%" : "100%"};
   }
 
   &::after{
-    width: ${(props) => props.labelPlacement === 'right' ? "10%" : "100%"};
+    width: ${(props) => props.labelPosition === 'right' ? "10%" : "100%"};
   }
 
   .text{

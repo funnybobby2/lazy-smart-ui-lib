@@ -4,7 +4,7 @@ export interface SwitchProps {
   custom?: string;
   disabled?: boolean;
   label?: ReactNode;
-  labelPlacement?: "left" | "right";
-  onClick: () => void;
+  labelPosition?: "left" | "right";
+  onClick: (val: boolean) => void;
   isSimple?: boolean;
 }

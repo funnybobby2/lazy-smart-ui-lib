@@ -9,7 +9,7 @@ export default {
   argTypes: {
     custom: { control: 'text' },
     label: { control: 'text' },
-    labelPlacement: {
+    labelPosition: {
       options: ['left', 'center', 'right'],
       control: { type: 'radio' },
     },

@@ -11,7 +11,7 @@ export default {
     disabled: {
       control: {type: 'boolean'}
     },
-    labelPlacement: {
+    labelPosition: {
       options: ['left', 'right'],
       control: { type: 'radio' },
     },

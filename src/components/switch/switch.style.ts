@@ -122,6 +122,12 @@ export const StyledSwitch = styled.div<{isSimple: boolean}>`
 
         &.disabled {
           background-color: ${(props) => props.isSimple ? "#84acd3" : "transparent"};
+          border-color: #84acd3;
+
+          .toggle-button{
+            background-color: ${(props) => props.isSimple ? "#FFFFFF" : "#84acd3"};
+          }
+
         }
       }
 

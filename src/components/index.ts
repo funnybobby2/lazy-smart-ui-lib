@@ -1,4 +1,5 @@
 export * from "./button";
+export * from "./buttonGroup";
 export * from "./switch";
 export * from "./divider";
 export * from "./badge";

@@ -1,0 +1,31 @@
+# ButtonGroup
+
+ButtonGroup component with different props.
+
+## Usage
+
+```ts
+import { ButtonGroup } from 'lazy-smart-ui-lib';
+import { Button } from 'lazy-smart-ui-lib';
+
+const Example = () => {
+  return (
+    <ButtonGroup>
+      <Button onClick={()=> console.log("Clicked")}> Button #1 </Button>
+      <Button onClick={()=> console.log("Clicked")}> Button #2 </Button>
+      <Button onClick={()=> console.log("Clicked")}> Button #3 </Button>
+      <Button onClick={()=> console.log("Clicked")}> Button #4 </Button>
+    </ButtonGroup>
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **custom** - A string that represents an external class to overwrite the style.
+- **direction** - A string 'horizontal' or 'vertical'
+- **children** - The buttons !
+
+

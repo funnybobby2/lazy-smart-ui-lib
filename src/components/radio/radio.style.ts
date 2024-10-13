@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { CheckboxProps } from "./checkbox.types";
+import { RadioProps } from "./radio.types";
 // disabled
 
-export const StyledCheckbox = styled.div<CheckboxProps & {checked: boolean}>`
+export const StyledRadio = styled.div<RadioProps>`
   cursor: ${(props) => props.disabled ? "default" : "pointer"};
   pointer-events: ${(props) => props.disabled ? "none" : "auto"};
   display: flex;
@@ -11,23 +11,23 @@ export const StyledCheckbox = styled.div<CheckboxProps & {checked: boolean}>`
   align-items: center;
 
   &:hover{
-    svg > g > g {
+    svg > path {
       fill: #1976d2;
     }
   }
 
   &.disabled {
-    svg > g > g {
+    svg > path {
       fill: #e2e2e3;
     }
-    #ic_fluent_checkbox_checked_24_filled{
+    svg > g > path:last-child{
       fill: #84acd3;
     }
     &:hover {
-      svg > g > g {
+      svg > path {
         fill: #e2e2e3;
       }
-      #ic_fluent_checkbox_checked_24_filled{
+      svg > g > path:last-child{
         fill: #84acd3;
       }
     }

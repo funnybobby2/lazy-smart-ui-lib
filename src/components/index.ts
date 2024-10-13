@@ -6,3 +6,4 @@ export * from "./badge";
 export * from "./notif";
 export * from './tooltip';
 export * from "./checkbox";
+export * from "./radioGroup";

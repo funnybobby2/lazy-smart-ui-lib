@@ -1,0 +1,36 @@
+# Radio
+
+Radio component with different props.
+
+## Usage
+
+```ts
+import { Radio } from 'lazy-smart-ui-lib';
+
+const options = [{label: "Radio #1", value: "#1"}, {label: "Radio #2", value: "#2"},{label: "Radio #3", value: "#3"}];
+
+const Example = () => {
+  return (
+      <RadioGroup
+        size="medium"
+        options={options}
+        selectedValue="#2"
+        onChange={(value: string)=> console.log("Clicked")}
+        disabled
+        labelPosition="left"
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **custom** - A string that represents an external class to overwrite the style.
+- **selectedValue** - String, the initial selected radio button value.
+- **disabled** - A boolean indicating whether the radio button group should be disabled or not. When disabled, the radio button group cannot be clicked or interacted with.
+- **onChange** _`(value: string) => void`_ - A function that is called when a radio button is clicked. It receives a MouseEventHandler for handling the click event on the radio button element.
+- **size** - A string with one of three possible values: "small", "medium", or "large". It defines the size or dimensions of the radio button.
+- **labelPosition** - A string to know where the label is positionned. "left" or "right"
+- **options** - an array of object like { label: string; value: string }. Represents each radio button

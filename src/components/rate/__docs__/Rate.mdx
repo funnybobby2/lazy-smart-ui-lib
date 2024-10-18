@@ -1,0 +1,31 @@
+# Rate
+
+Rate component with different props.
+
+## Usage
+
+```ts
+import { Rate } from 'lazy-smart-ui-lib';
+
+const Example = () => {
+  return (
+      <Rate
+        label="Rate"
+        max={10}
+        onChange={()=> console.log("Clicked")}
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **value** - A number that represents the current rate.
+- **isprecise** - A boolean indicating whether the rate compopnent should be with half star.
+- **isreadonly** - A boolean indicating whether the rate compopnent should be readonly or not. When readonly, the rate component cannot be clicked or interacted with.
+- **label** - A ReactNode, can be a simple string or a component like an svg.
+- **position** - A string to know where the label is positionned.
+- **max** - The user can choose a rate on 5 or 10.
+- **onChange** _`(number) => void`_ - A function that is called when the rate is clicked.

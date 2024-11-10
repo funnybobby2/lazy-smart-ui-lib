@@ -3,6 +3,7 @@ import { RateProps } from "./rate.types";
 import React, { FC, useState } from "react";
 
 const Rate: FC<RateProps> = ({
+  custom,
   value = 0,
   max = 5,
   label,
@@ -10,10 +11,12 @@ const Rate: FC<RateProps> = ({
   onChange,
   isprecise = false,
   isreadonly = false,
+  size = "medium"
 }) => {
   const [rate, setRate] = useState(value);
   const [hoverValue, setHoverValue] = useState<number | null>(null);
-
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // Index de l'étoile survolée
+  
   const currentRating = hoverValue !== null ? hoverValue : rate;
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>, index: number) => {
@@ -26,6 +29,7 @@ const Rate: FC<RateProps> = ({
     } else if (!isreadonly) {
       setHoverValue(index + 1);
     }
+    setHoveredIndex(index);
   };
 
   const handleClick = (index: number, event: React.MouseEvent<HTMLDivElement>) => {
@@ -46,10 +50,11 @@ const Rate: FC<RateProps> = ({
 
   const handleMouseLeave = () => {
     setHoverValue(null);
+    setHoveredIndex(null);
   };
 
   return (
-    <RateWrapper position={position}>
+    <RateWrapper position={position} size={size} className={custom}>
       {label && <span className="label">{label}</span>}
       <div>
         {[...Array(max)].map((_, index) => {
@@ -63,14 +68,14 @@ const Rate: FC<RateProps> = ({
           }
 
           return (
-            <StarWrapper
+            <StarWrapper isHovered={index === hoveredIndex}
               key={starValue}
               onMouseMove={(event) => handleMouseMove(event, index)}
               onClick={(event) => handleClick(index, event)}
               onMouseLeave={handleMouseLeave}
             >
-              <StarBackground>★</StarBackground>
-              <StarForeground filledPercentage={filledPercentage}>★</StarForeground>
+              <StarBackground size={size}>★</StarBackground>
+              <StarForeground filledPercentage={filledPercentage} size={size}>★</StarForeground>
             </StarWrapper>
           );
         })}

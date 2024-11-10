@@ -7,4 +7,5 @@ export * from "./notif";
 export * from "./radioGroup";
 export * from "./rate";
 export * from "./switch";
+export * from "./Textbox";
 export * from './tooltip';

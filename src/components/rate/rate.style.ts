@@ -1,22 +1,24 @@
 import styled from "styled-components";
 
-export const StarWrapper = styled.div`
+export const StarWrapper = styled.div<{ isHovered: boolean }>`
   position: relative;
   display: inline-block;
   cursor: pointer;
   user-select: none;
+  transition: transform 0.2s ease-in-out;
+  transform: ${({ isHovered }) => (isHovered ? "scale(1.3)" : "scale(1)")};
 `;
 
-export const StarBackground = styled.span`
-  font-size: 2rem;
-  line-height: 1.8rem;
+export const StarBackground = styled.span<{ size: "small" | "medium" | "large" }>`
+  font-size:  ${(props) => (props.size === "medium") ? "22px" :
+    (props.size === "small") ? "18px" : "26px"};
   color: #ccc;
 `;
 
-export const StarForeground = styled.span<{ filledPercentage: number }>`
-  font-size: 2rem;
-  line-height: 1.8rem;
-  color: #ffd700;
+export const StarForeground = styled.span<{ filledPercentage: number, size: "small" | "medium" | "large" }>`
+  font-size:  ${(props) => (props.size === "medium") ? "22px" :
+    (props.size === "small") ? "18px" : "26px"};
+  color: #f5c226;
   position: absolute;
   top: 0;
   left: 0;
@@ -25,7 +27,7 @@ export const StarForeground = styled.span<{ filledPercentage: number }>`
   pointer-events: none;
 `;
 
-export const RateWrapper = styled.div<{ position: string }>`
+export const RateWrapper = styled.div<{ position: string, size: "small" | "medium" | "large" }>`
   display: flex;
   flex-direction: ${({ position }) =>
     position === "top" || position === "bottom" ? "column" : "row"};
@@ -37,8 +39,11 @@ export const RateWrapper = styled.div<{ position: string }>`
     position === "bottom" && "flex-direction: column-reverse;"}
 
   .label {
-    font-size: 1.3rem;
-    line-height: 1.4rem;
-    padding-right: 8px;
+    font-size: ${(props) => (props.size === "medium") ? "0.875rem;" :
+      (props.size === "small") ? "0.8125rem" : "0.9375rem"};
+    line-height:  ${(props) => (props.size === "medium") ? "1rem" :
+    (props.size === "small") ? "0.8rem" : "1.2rem"};
+    font-weight: bold;
+    padding: 8px;
   }
 `;

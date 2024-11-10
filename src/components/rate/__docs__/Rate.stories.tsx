@@ -26,6 +26,10 @@ export default {
       options: [5, 10],
       control: { type: "radio" },
     },
+    size: {
+      options: ["small", "medium", "large"],
+      control: { type: "radio" },
+    }
   },
 } as Meta<typeof Rate>;
 

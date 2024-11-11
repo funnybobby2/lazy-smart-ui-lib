@@ -1,6 +1,6 @@
 {
   "name": "lazy-smart-ui-lib",
-  "version": "0.11.3",
+  "version": "0.12.1",
   "description": "Lazy smart Ui library",
   "scripts": {
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",

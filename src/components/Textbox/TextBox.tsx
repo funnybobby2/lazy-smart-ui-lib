@@ -1,5 +1,5 @@
-import { StyledTextBox } from './textBox.style';
 import clsx from 'clsx';
+import { StyledTextBox } from './textBox.style';
 import { TextBoxProps } from "./textBox.types";
 import {FC, useState} from "react";
 import { CloseIcon } from '../icon/Icon';

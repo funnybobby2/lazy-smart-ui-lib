@@ -6,6 +6,7 @@ export * from "./divider";
 export * from "./notif";
 export * from "./radioGroup";
 export * from "./rate";
+export * from "./select";
 export * from "./switch";
-export * from "./Textbox";
+export * from "./textbox";
 export * from './tooltip';

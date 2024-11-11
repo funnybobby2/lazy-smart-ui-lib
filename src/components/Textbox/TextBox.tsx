@@ -4,7 +4,7 @@ import { TextBoxProps } from "./textBox.types";
 import {FC, useState} from "react";
 import { CloseIcon } from '../icon/Icon';
 
-const Button: FC<TextBoxProps> = ({custom, id, disabled = false, onChange, onError, readonly = false, size = "medium", theme = "classic", completion = [], placeholder = "", validator, value = ""}) => {
+const TextBox: FC<TextBoxProps> = ({custom, id, disabled = false, onChange, onError, readonly = false, size = "medium", theme = "classic", completion = [], placeholder = "", validator, value = ""}) => {
 
   const [localValue, setLocalValue] = useState(value);
   const [error, setError] = useState(false);
@@ -51,4 +51,4 @@ const Button: FC<TextBoxProps> = ({custom, id, disabled = false, onChange, onErr
   );
 };
 
-export default Button;
+export default TextBox;

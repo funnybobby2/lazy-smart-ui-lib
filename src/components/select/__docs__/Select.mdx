@@ -1,0 +1,33 @@
+# Select
+
+Select component with different props.
+
+## Usage
+
+```ts
+import { Select } from 'lazy-smart-ui-lib';
+
+const Example = () => {
+  return (
+      <Select
+        size="small"
+        id="test"
+        value="test"
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **options** - An array of string for options
+- **custom** - A string that represents an external class to overwrite the style.
+- **disabled** - A boolean indicating whether the select should be disabled or not. When disabled, the select cannot be clicked or interacted with.
+- **id** - A string that represnt the id of the select
+- **onChange** - A function that is called when the select value changed
+- **placeholder** - A string that represents the placeholder
+- **size** - A string with one of three possible values: "small", "medium", or "large". It defines the size or dimensions of the select.
+- **theme** - A string with one of three possible values: "naked", "classic", or "outlined". It defines the style of the select display.
+- **value** - A string that represents the default value for the select

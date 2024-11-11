@@ -9,14 +9,14 @@ export const StyledTextBox = styled.div`
     position: relative;
 
     input{
-      color: #313131;
+      color: #444249;
       box-sizing: content-box;
       height: 18px;
       margin: 0px;
       display: block;
       min-width: 0px;
       width: 100%;
-      padding: 8px 12px 8px;
+      padding: 8px 22px 8px 12px;
       border-radius: 4px;
       outline: none;
       font-size: 0.875rem;
@@ -25,23 +25,23 @@ export const StyledTextBox = styled.div`
     &.textBox-classic {
       input{
         border: 0px;
-        background-color: #f5f5f5;
+        background-color: rgba(0, 0, 0, 0.04);
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        border-bottom: 1px solid #b3b3b3;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         &:focus {
           border-bottom: 1px solid #1976d2;
           box-shadow: 0 1px 0 0 #1976d2;
         }
       }
       &.error input{
-        color: #db4444;
-        background-color: #f3dbdb;
-        border-bottom: 1px solid #db4444;
+        color: #ffffff;
+        background-color: #ff3c41;
+        border-bottom: 1px solid #ab4242;
 
         &:focus{
-          border-bottom: 1px solid #db4444;
-          box-shadow: 0 1px 0 0 #db4444;
+          border-bottom: 1px solid #ab4242;
+          box-shadow: 0 1px 0 0 #ab4242;
         }
       }
     }
@@ -52,7 +52,7 @@ export const StyledTextBox = styled.div`
         background-color: transparent;
         border-bottom-left-radius: 0;
         border-top-right-radius: 0;
-        border-bottom: 1px solid #b3b3b3;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         &:focus {
           border-bottom: 1px solid #1976d2;
           box-shadow: 0 1px 0 0 #1976d2;
@@ -60,19 +60,19 @@ export const StyledTextBox = styled.div`
       }
 
       &.error input{
-        color: #db4444;
-        border-bottom: 1px solid #db4444;
+        color: #ff3c41;
+        border-bottom: 1px solid #ff3c41;
 
         &:focus{
-          border-bottom: 1px solid #db4444;
-          box-shadow: 0 1px 0 0 #db4444;
+          border-bottom: 1px solid #ff3c41;
+          box-shadow: 0 1px 0 0 #ff3c41;
         }
       }
     }
 
     &.textBox-outlined {
       input {
-        border: 1px solid #b3b3b3;
+        border: 1px solid rgba(0, 0, 0, 0.2);
         background-color: transparent;
         &:focus {
           border: 1px solid #1976d2;
@@ -80,11 +80,11 @@ export const StyledTextBox = styled.div`
       }
 
       &.error input{
-        color: #db4444;
-        border: 1px solid #db4444;
+        color: #ff3c41;
+        border: 1px solid #ff3c41;
 
         &:focus{
-          border: 1px solid #db4444;
+          border: 1px solid #ff3c41;
         }
       }
     }
@@ -105,5 +105,38 @@ export const StyledTextBox = styled.div`
       opacity: 0.6;
       pointer-events: none;
       cursor: default;
+    }
+
+    .clear {
+      position: absolute;
+      right: 0px;
+      color: grey;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 22px;
+    }
+
+    &.textBox-classic.error .clear {
+      color: #ab4242;
+      &:hover{
+        color: #ffffff;
+        background-color: #ab4242;
+      }
+    }
+
+    &:hover .clear {
+      opacity: 1;
+      pointer-events: all;
+
+      &:hover {
+        background-color: #ff3c41;
+        color: #ffffff;
+      }
     }
   }`;

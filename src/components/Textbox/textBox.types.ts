@@ -4,6 +4,7 @@ export interface TextBoxProps {
   disabled?: boolean;
   id: string;
   onChange: (text: string) => void;
+  onError?: (state: boolean) => void;
   placeholder?: string;
   readonly?: boolean;
   size?: "small" | "medium" | "large";

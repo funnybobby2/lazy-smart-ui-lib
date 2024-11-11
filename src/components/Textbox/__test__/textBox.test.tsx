@@ -5,7 +5,7 @@ import TextBox from "../TextBox";
 
 describe("Button component", () => {
   it("Button should render correctly", () => {
-    render(<TextBox id="toto" value="test"/>);
+    render(<TextBox id="toto" value="test" onChange={(text) => console.log(text)} onError={(bool) => console.log(bool)}/>);
     const textBox = screen.getByText("test");
     expect(textBox).toBeInTheDocument();
   });

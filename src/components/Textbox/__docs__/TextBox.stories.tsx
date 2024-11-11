@@ -40,6 +40,7 @@ TextBoxClassic.args = {
 export const TextBoxNaked = Template.bind({});
 TextBoxNaked.args = {
   onChange: (text: string) => {console.log(text)},
+  onError: (bool: boolean) => {console.log(bool)},
   id: "test",
   theme: "naked",
   placeholder: "placeholder"
@@ -48,6 +49,7 @@ TextBoxNaked.args = {
 export const TextBoxOutlined = Template.bind({});
 TextBoxOutlined.args = {
   onChange: (text: string) => {console.log(text)},
+  onError: (bool: boolean) => {console.log(bool)},
   id: "test",
   theme: "outlined",
   placeholder: "placeholder"
@@ -56,6 +58,7 @@ TextBoxOutlined.args = {
 export const TextBoxCompletion = Template.bind({});
 TextBoxCompletion.args = {
   onChange: (text: string) => {console.log(text)},
+  onError: (bool: boolean) => {console.log(bool)},
   id: "test",
   placeholder: "placeholder",
   completion: ["aaa", "bbb", "ccc", "ddd"]
@@ -64,6 +67,7 @@ TextBoxCompletion.args = {
 export const TextBoxValidator = Template.bind({});
 TextBoxValidator.args = {
   onChange: (text: string) => {console.log(text)},
+  onError: (bool: boolean) => {console.log(bool)},
   id: "test",
   placeholder: "placeholder",
   validator: (text) => /^[A-Z]+$/.test(text)
